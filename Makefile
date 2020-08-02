@@ -4,13 +4,13 @@
 PROJECT_NAME = online_store
 
 run:  ## Runs dev server
-	@python manage.py runserver
+		@python manage.py runserver
 
 migrations:  ## Migrate database to the latest version
-    @python manage.py makemigrations
-    @python manage.py migrate
+		@python manage.py makemigrations
+		@python manage.py migrate
 
 .PHONY: \
   run \
-  migrations
+  migrations\
 
