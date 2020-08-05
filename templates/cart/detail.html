@@ -1,4 +1,5 @@
 {% extends "store/base.html" %}
+{% load i18n %}
 {% load static %}
 
 {% block title %}
@@ -70,6 +71,20 @@
       </tr>
     </tbody>
   </table>
+  {% if recommended_products %}
+    <div class="recommendations cart">
+      <h3>{% trans "People who bought this also bought" %}</h3>
+      {% for p in recommended_products %}
+        <div class="item">
+          <a href="{{ p.get_absolute_url }}">
+            <img src="{% if p.image %}{{ p.image.url }}{% else %}
+            {% static "images/no_image.png" %}{% endif %}">
+          </a>
+          <p><a href="{{ p.get_absolute_url }}">{{ p.name }}</a></p>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
   <form action="{% url "coupons:apply" %}" method="post">
     {{ coupon_apply_form }}
     <input type="submit" value="Apply">
