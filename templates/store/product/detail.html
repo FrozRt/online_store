@@ -1,9 +1,10 @@
 {% extends "store/base.html" %}
-{% load i18n %}
 {% load static %}
+<h1 class="product-title">
 {% block title %}
     {% if category %}{{ category.title }}{% else %}Products{% endif %}
 {% endblock %}
+</h1>
 {% block content %}
   <div class="product-detail">
     <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "images/no_image.png" %}{% endif %}">

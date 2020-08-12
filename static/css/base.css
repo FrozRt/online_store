@@ -120,10 +120,11 @@ ul.errorlist {
     padding:10px 100px;
     font-size:18px;
     overflow:auto;
+    background: #1b6d32;
 }
 
 #subheader {
-    background:#ececec;
+    background: #f3f7cc;
     color:#444;
     padding:15px 100px;
     overflow:auto;
@@ -132,14 +133,22 @@ ul.errorlist {
 #header .logo {
     font-family: 'Ubuntu', sans-serif;
     float:left;
-    color:#333;
+    color: #f5f3f3;
     font-size:22px;
     margin-right:10%;
 }
 
+.product-title {
+    font-size:16px;
+    float:right;
+}
+
+
 #subheader .cart {
     float:right;
     padding-top:4px;
+    font-size:16px;
+    color: #1b6d32;
 }
 
 #content {
@@ -313,18 +322,4 @@ ul.errorlist {
 
 .recommendations.cart img {
     width:120px;
-}
-
-/* braintree hosted fields */
-form div.field {
-    font-size:13px;
-    color:#666;
-    width:300px;
-    height:22px;
-    margin-bottom:10px;
-    padding:6px 12px;
-    border:0;
-    background:#efefef;
-    color:#666;
-    border-radius:4px;
 }
